@@ -1,30 +1,23 @@
+<?php require_once __DIR__ . '/components/header.php' ?>
+
 <?php
-require __DIR__ . '/functions.php';
-
+require_once __DIR__ . '/functions.php';
 $pdo = connectToDB();
-
-$stmt = $pdo->query('SELECT * FROM posts');
-while ($row = $stmt->fetch()) {
-    echo $row['title'] . "\n";
-}
-
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Fake News</title>
+<h1>Fake News</h1>
 
-  <!-- STYLES -->
-  <link rel="stylesheet" type="text/css" href="assets/css/vendor/normalize.css">
-  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
-</head>
-<body>
+<div>
+  <?php 
+  $articles = getNewsFeed($pdo);
+  ?>
+  <?php foreach ($articles as $article) : ?>
+    <div>
+      <h2><?= $article['title'] ?></h2>
+      <p><?= $article['body'] ?></p>
+    </div>
+  <?php endforeach; ?>
+</div>
 
-  <h1>Fake News</h1>
+<?php require_once __DIR__ . '/components/footer.php' ?>
 
-</body>
-</html>
