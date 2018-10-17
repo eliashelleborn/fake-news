@@ -1,3 +1,15 @@
+<?php
+require __DIR__ . '/functions.php';
+
+$pdo = connectToDB();
+
+$stmt = $pdo->query('SELECT * FROM posts');
+while ($row = $stmt->fetch()) {
+    echo $row['title'] . "\n";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
