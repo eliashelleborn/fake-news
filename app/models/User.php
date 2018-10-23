@@ -1,12 +1,18 @@
 <?php
 
+declare (strict_types = 1);
+
+namespace App\Models;
+
+use App\Core\Database;
+
 class User
 {
     private $pdo = null;
 
     public function __construct()
     {
-        $this->pdo = (new DB)->connect();
+        $this->pdo = (new Database)->connect();
     }
 
     public function createUser(array $user)

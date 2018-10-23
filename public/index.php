@@ -1,10 +1,10 @@
 <?php
 
-require_once '../app/Router.php';
-require_once '../app/Database.php';
-require_once '../app/models/Article.php';
-require_once '../app/models/User.php';
-require_once '../app/controllers/Controller.php';
+require_once dirname(__DIR__) . '/vendor/autoload.php';
+
+use App\Core\Router;
+
+putenv("BASE_URL=http://localhost:8888/fake-news/public");
 
 // ===== ROUTING =====
 $router = new Router();

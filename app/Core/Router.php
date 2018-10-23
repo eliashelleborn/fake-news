@@ -1,5 +1,9 @@
 <?php
 
+declare (strict_types = 1);
+
+namespace App\Core;
+
 class Router
 {
     private $routes = [];
@@ -63,8 +67,10 @@ class Router
     public function getController(array $route)
     {
         // Require and create controller instance
-        require_once dirname(__DIR__) . '/app/controllers/' . $route['controller'] . '.php';
-        $this->controller = new $route['controller'];
+        // require_once dirname(__DIR__) . '/app/controllers/' . $route['controller'] . '.php';
+        $className = $route['controller'];
+        $controllerNamespace = "App\Controllers\\$className";
+        $this->controller = new $controllerNamespace;
     }
 
     public function getParams(array $url, array $route)

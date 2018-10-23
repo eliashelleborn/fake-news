@@ -10,7 +10,7 @@
 
 <div>
   <h2>Register</h2>
-  <form action="/fake-news/public/auth/register" method="post">
+  <form action="<?=getenv("BASE_URL")?>/register" method="post">
 
     <div>
       <label for="email">Email</label>

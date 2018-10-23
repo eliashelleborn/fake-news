@@ -1,7 +1,11 @@
 <?php
 declare (strict_types = 1);
 
-class DB
+namespace App\Core;
+
+use PDO;
+
+class Database
 {
     public function connect(): PDO
     {
