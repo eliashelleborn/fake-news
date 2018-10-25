@@ -1,46 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
+<?php require_once dirname(__DIR__) . "/components/header.php";?>
 
-<div>
-  <h2>Register</h2>
-  <form action="<?=getenv("BASE_URL")?>/register" method="post">
+<div class="section">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <p class="title has-text-centered">Register</p>
+                <form action="<?=getenv("BASE_URL")?>/register" method="post">
 
-    <div>
-      <label for="email">Email</label>
-      <input type="email" name="email" value="<?=htmlspecialchars($input['email'])?>">
-    </div>
-    <div>
-      <label for="username">Username</label>
-      <input type="text" name="username" value="<?=htmlspecialchars($input['username'])?>">
-    </div>
-    <div>
-      <label for="password">Password</label>
-      <input type="password" name="password" value="<?=htmlspecialchars($input['password'])?>">
-    </div>
-    <div>
-      <label for="confirmPassword">Confirm Password</label>
-      <input type="password" name="confirmPassword" value="<?=htmlspecialchars($input['confirmPassword'])?>">
-    </div>
-    <button type="submit">Register</button>
-  </form>
+                    <div class="field">
+                        <label class="label" for="email">Email</label>
+                        <div class="control">
+                            <input class="input" type="email" name="email" value="<?=htmlspecialchars($input['email'])?>">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="username">Username</label>
+                        <div class="control">
+                            <input class="input" type="text" name="username" value="<?=htmlspecialchars($input['username'])?>">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="password">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" name="password" value="<?=htmlspecialchars($input['password'])?>">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label" for="confirmPassword">Confirm Password</label>
+                        <div class="control">
+                            <input class="input" type="password" name="confirmPassword" value="<?=htmlspecialchars($input['confirmPassword'])?>">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control">
+                            <button class="button is-dark" type="submit">Register</button>
+                        </div>
+                    </div>
 
-  <?php if (isset($errors)): ?>
-    <div>
-      <ul>
-        <?php foreach ($errors as $error): ?>
-          <li><?=$error?></li>
-        <?php endforeach;?>
-      </ul>
+                </form>
+
+            </div>
+
+        </div>
+        <?php if (!empty($errors)): ?>
+            <div class="columns is-centered">
+                <div class="notification is-danger column is-half">
+                    <ul>
+                        <?php foreach ($errors as $error): ?>
+                        <li>
+                            - <?=$error?>
+                        </li>
+                        <?php endforeach;?>
+                    </ul>
+                </div>
+            </div>
+        <?php endif;?>
     </div>
-  <?php endif;?>
 </div>
 
-</body>
-</html>
+<?php require_once dirname(__DIR__) . "/components/footer.php";?>

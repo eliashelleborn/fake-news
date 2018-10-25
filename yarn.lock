@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+bulma@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.2.tgz#8e944377b74c7926558830d38d8e19eaf49f5fb6"
+  integrity sha512-6JHEu8U/1xsyOst/El5ImLcZIiE2JFXgvrz8GGWbnDLwTNRPJzdAM0aoUM1Ns0avALcVb6KZz9NhzmU53dGDcQ==
+
 spectre.css@^0.5.3:
   version "0.5.3"
   resolved "https://registry.yarnpkg.com/spectre.css/-/spectre.css-0.5.3.tgz#90d9b08dec06f1379c8ebf6deb4580e01e705101"

@@ -6,6 +6,6 @@
   "author": "Elias Johansson <elias_johansson@hotmail.se>",
   "license": "MIT",
   "dependencies": {
-    "spectre.css": "^0.5.3"
+    "bulma": "^0.7.2",
   }
 }

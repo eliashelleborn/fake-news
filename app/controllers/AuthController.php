@@ -35,15 +35,14 @@ class AuthController extends Controller
             if (count($errors) === 0) {
                 // See if user with email already exists
                 $userModel = new User();
-                $emailInUse;
 
                 try {
-                    $userModel->getByEmail($input['email']);
-                } catch(\Exception $e) {
+                    $user = $userModel->getByEmail($input['email']);
+                } catch (\Exception $e) {
 
                 }
 
-                if () {
+                if (!isset($user)) {
                     // Confirm Passwords
                     if ($input['password'] === $input['confirmPassword']) {
                         // Create hash & try create user
@@ -51,7 +50,7 @@ class AuthController extends Controller
 
                         $_SESSION['email'] = $input['email'];
 
-                        /* $this->redirect("/"); */
+                        $this->redirect("/");
 
                     } else {
                         $errors[] = 'Passwords did not match.';
@@ -101,7 +100,7 @@ class AuthController extends Controller
                         $_SESSION['email'] = $input['email'];
                         $this->redirect("/");
                     } else {
-                        $errors[] = "Passwords did not match.";
+                        $errors[] = "Incorrect password.";
                     }
                 } else {
                     $errors[] = "No user with that email was found.";
