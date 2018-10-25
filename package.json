@@ -1,0 +1,11 @@
+{
+  "name": "fake-news",
+  "version": "1.0.0",
+  "main": "public/assets/js/main.js",
+  "repository": "https://github.com/eliasjohansson/fake-news.git",
+  "author": "Elias Johansson <elias_johansson@hotmail.se>",
+  "license": "MIT",
+  "dependencies": {
+    "spectre.css": "^0.5.3"
+  }
+}

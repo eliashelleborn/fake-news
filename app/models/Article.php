@@ -4,18 +4,10 @@ declare (strict_types = 1);
 
 namespace App\Models;
 
-use App\Core\Database;
+use App\Core\Model;
 
-class Article
+class Article extends Model
 {
-
-    private $pdo = null;
-
-    public function __construct()
-    {
-        $this->pdo = (new Database)->connect();
-    }
-
     public function getNewsFeed(): array
     {
         $sql = "SELECT articles.id, articles.title, articles.body, users.id, users.username AS author

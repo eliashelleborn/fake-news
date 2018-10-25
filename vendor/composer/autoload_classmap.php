@@ -6,4 +6,23 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controllers\\AuthController' => $baseDir . '/app/Controllers/AuthController.php',
+    'App\\Controllers\\HomeController' => $baseDir . '/app/Controllers/HomeController.php',
+    'App\\Controllers\\NotFoundController' => $baseDir . '/app/Controllers/NotFoundController.php',
+    'App\\Controllers\\TestController' => $baseDir . '/app/Controllers/TestController.php',
+    'App\\Core\\Controller' => $baseDir . '/app/Core/Controller.php',
+    'App\\Core\\Database' => $baseDir . '/app/Core/Database.php',
+    'App\\Core\\Model' => $baseDir . '/app/Core/Model.php',
+    'App\\Core\\Router' => $baseDir . '/app/Core/Router.php',
+    'App\\Models\\Article' => $baseDir . '/app/Models/Article.php',
+    'App\\Models\\Auth' => $baseDir . '/app/Models/Auth.php',
+    'App\\Models\\User' => $baseDir . '/app/Models/User.php',
+    'Dotenv\\Dotenv' => $vendorDir . '/vlucas/phpdotenv/src/Dotenv.php',
+    'Dotenv\\Exception\\ExceptionInterface' => $vendorDir . '/vlucas/phpdotenv/src/Exception/ExceptionInterface.php',
+    'Dotenv\\Exception\\InvalidCallbackException' => $vendorDir . '/vlucas/phpdotenv/src/Exception/InvalidCallbackException.php',
+    'Dotenv\\Exception\\InvalidFileException' => $vendorDir . '/vlucas/phpdotenv/src/Exception/InvalidFileException.php',
+    'Dotenv\\Exception\\InvalidPathException' => $vendorDir . '/vlucas/phpdotenv/src/Exception/InvalidPathException.php',
+    'Dotenv\\Exception\\ValidationException' => $vendorDir . '/vlucas/phpdotenv/src/Exception/ValidationException.php',
+    'Dotenv\\Loader' => $vendorDir . '/vlucas/phpdotenv/src/Loader.php',
+    'Dotenv\\Validator' => $vendorDir . '/vlucas/phpdotenv/src/Validator.php',
 );

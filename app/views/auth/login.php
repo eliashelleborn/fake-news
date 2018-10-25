@@ -9,24 +9,16 @@
 <body>
 
 <div>
-  <h2>Register</h2>
-  <form action="<?=getenv("BASE_URL")?>/register" method="post">
+  <h2>Login</h2>
+  <form action="<?=getenv("BASE_URL")?>/login" method="post">
 
     <div>
       <label for="email">Email</label>
       <input type="email" name="email" value="<?=htmlspecialchars($input['email'])?>">
     </div>
     <div>
-      <label for="username">Username</label>
-      <input type="text" name="username" value="<?=htmlspecialchars($input['username'])?>">
-    </div>
-    <div>
       <label for="password">Password</label>
       <input type="password" name="password" value="<?=htmlspecialchars($input['password'])?>">
-    </div>
-    <div>
-      <label for="confirmPassword">Confirm Password</label>
-      <input type="password" name="confirmPassword" value="<?=htmlspecialchars($input['confirmPassword'])?>">
     </div>
     <button type="submit">Register</button>
   </form>

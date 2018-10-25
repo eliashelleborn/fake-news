@@ -4,18 +4,39 @@ declare (strict_types = 1);
 
 namespace App\Models;
 
-use App\Core\Database;
+use App\Core\Model;
 
-class User
+class User extends Model
 {
-    private $pdo = null;
 
-    public function __construct()
+    public function getById(string $id): array
     {
-        $this->pdo = (new Database)->connect();
+        $sql = 'SELECT * FROM users WHERE id = ?';
+        $sth = $this->pdo->prepare($sql);
+        try {
+            $sth->execute([$id]);
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+        $user = $sth->fetch();
+        return $user;
     }
 
-    public function createUser(array $user)
+    public function getByEmail(string $email): array
+    {
+        $sql = 'SELECT * FROM users WHERE email = ?';
+        $sth = $this->pdo->prepare($sql);
+        $sth->execute([$email]);
+        $user = $sth->fetch();
+        if (empty($user)) {
+            throw new \Exception('User not found');
+        } else {
+            return $user;
+        }
+
+    }
+
+    public function create(array $user)
     {
         $hash = password_hash($user['password'], PASSWORD_BCRYPT);
         $sql = 'INSERT INTO users ("email", "username", "password") VALUES (?,?,?)';
