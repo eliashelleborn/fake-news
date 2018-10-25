@@ -42,16 +42,16 @@ class AuthController extends Controller
 
                 }
 
-                if (!isset($user)) {
+                if (empty($user)) {
                     // Confirm Passwords
                     if ($input['password'] === $input['confirmPassword']) {
                         // Create hash & try create user
-                        $userModel->create($input);
-
-                        $_SESSION['email'] = $input['email'];
-
-                        $this->redirect("/");
-
+                        if ($userModel->create($input)) {
+                            $_SESSION['email'] = $input['email'];
+                            $this->redirect("/");
+                        } else {
+                            $errors[] = 'Could not register user.';
+                        }
                     } else {
                         $errors[] = 'Passwords did not match.';
                     }

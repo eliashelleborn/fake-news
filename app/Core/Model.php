@@ -5,11 +5,10 @@ namespace App\Core;
 
 class Model
 {
-    protected $pdo = null;
+    protected $db = null;
 
     public function __construct()
     {
-        $db = new Database();
-        $this->pdo = $db->connect();
+        $this->db = new Database();
     }
 }

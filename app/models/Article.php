@@ -10,16 +10,18 @@ class Article extends Model
 {
     public function getNewsFeed(): array
     {
-        $sql = "SELECT articles.id, articles.title, articles.body, users.id, users.username AS author
+        $sql = "SELECT articles.id, articles.title, articles.body, users.id, users.name AS author
                 FROM articles
             LEFT OUTER JOIN articles_users
                 ON articles.id = articles_users.article_id
             LEFT OUTER JOIN users
                 ON articles_users.user_id = users.id";
 
-        $sth = $this->pdo->prepare($sql);
-        $sth->execute();
-        $articles = $sth->fetchAll();
-        return $articles;
+        try {
+            $res = $this->db->get($sql);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+        return $res;
     }
 }

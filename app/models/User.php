@@ -11,41 +11,36 @@ class User extends Model
 
     public function getById(string $id): array
     {
-        $sql = 'SELECT * FROM users WHERE id = ?';
-        $sth = $this->pdo->prepare($sql);
         try {
-            $sth->execute([$id]);
+            $sql = 'SELECT * FROM users WHERE id = ?';
+            $user = $this->db->getOne($sql, [$id]);
         } catch (PDOException $e) {
-            var_dump($e);
+            throw $e;
         }
-        $user = $sth->fetch();
         return $user;
     }
 
     public function getByEmail(string $email): array
     {
-        $sql = 'SELECT * FROM users WHERE email = ?';
-        $sth = $this->pdo->prepare($sql);
-        $sth->execute([$email]);
-        $user = $sth->fetch();
-        if (empty($user)) {
-            throw new \Exception('User not found');
-        } else {
-            return $user;
+        try {
+            $sql = 'SELECT * FROM users WHERE email = ?';
+            $user = $this->db->getOne($sql, [$email]);
+        } catch (\Exception $e) {
+            throw $e;
         }
 
+        return $user;
     }
 
-    public function create(array $user)
+    public function create(array $user): bool
     {
-        $hash = password_hash($user['password'], PASSWORD_BCRYPT);
-        $sql = 'INSERT INTO users ("email", "username", "password") VALUES (?,?,?)';
-        $sth = $this->pdo->prepare($sql);
         try {
-            $sth->execute([$user['email'], $user['username'], $hash]);
+            $hash = password_hash($user['password'], PASSWORD_BCRYPT);
+            $sql = 'INSERT INTO users ("email", "name", "password") VALUES (?,?,?)';
+            $status = $this->db->insert($sql, [$user['email'], $user['username'], $hash]);
         } catch (PDOException $e) {
-            var_dump($e);
-
+            throw $e;
         }
+        return $status;
     }
 }
