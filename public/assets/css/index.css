@@ -7,6 +7,72 @@
 body {
   font-family: 'Lato', sans-serif; }
 
+section.section {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.featured {
+  display: flex;
+  flex-direction: column; }
+  .featured__post {
+    background-color: #3C3C3C;
+    transition: .3s ease; }
+    .featured__post:hover {
+      transform: scale(1.03); }
+    .featured__post img {
+      display: block;
+      object-fit: cover;
+      height: 100px;
+      width: 100%;
+      margin: 0; }
+    .featured__post--big {
+      height: 424px; }
+      .featured__post--big img {
+        height: 324px; }
+    .featured__post--small {
+      min-height: 200px;
+      max-height: 200px; }
+      .featured__post--small:first-child {
+        margin-bottom: 24px; }
+  .featured__desc {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px; }
+    .featured__desc a.title {
+      color: white;
+      margin-bottom: 3px;
+      display: block;
+      width: 100%; }
+
+.article-preview a {
+  display: block; }
+
+.article-preview:hover p.title {
+  text-decoration: underline; }
+
+.article-preview img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 15px; }
+
+.article-preview p, .article-preview p.title {
+  transition: .3s ease;
+  margin-bottom: 15px;
+  color: black; }
+
+.sidebar .article-preview img {
+  height: 75px; }
+
+.sidebar .article-preview a > * {
+  margin-bottom: 5px; }
+
+.sidebar .article-preview hr {
+  margin: 10px 0 15px 0; }
+
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

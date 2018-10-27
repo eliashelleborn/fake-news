@@ -1,9 +1,11 @@
 Highest Priority:
-  ☐ Homepage content & style
+  ✔ Homepage content & style @done(18-10-27 21:38)
   ☐ Single article page
   ☐ Admin dashboard
   ☐ Author page (all articles by user)
   ☐ Like counter ("Fake")
+  ✔ Featured Posts ("Fake" to start with) @done(18-10-27 21:36)
+  ✔ Popular posts sidebar ("Fake") @done(18-10-27 21:37)
 
   User roles system:
     ☐ Member, Writer, Admin
@@ -14,7 +16,10 @@ Highest Priority:
 
 Extra (If I have time):
   ☐ WISYWIG Editor for articles
+  ☐ Connect featured posts to database
   ☐ Connect like counter to database
+  ☐ Popular posts sidebar depending on likes
+  ☐ Flash messages
   ☐ Comments
   ☐ Search (articles & authors/writers)
 

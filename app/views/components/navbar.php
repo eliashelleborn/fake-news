@@ -1,8 +1,8 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-            <p class="title is-4">FN</p>
+            <a class="navbar-item" href="<?=getenv('BASE_URL') . "/";?>">
+                <p class="title is-4">FN</p>
             </a>
 
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -14,7 +14,7 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-start">
-            <a class="navbar-item">
+            <a class="navbar-item" href="<?=getenv('BASE_URL') . "/";?>">
                 Home
             </a>
 
