@@ -10,6 +10,9 @@ class AuthController extends Controller
 {
     public function register()
     {
+        if ($this->auth->check()) {
+            $this->redirect('/');
+        }
 
         $errors = [];
         $input = [
@@ -62,11 +65,15 @@ class AuthController extends Controller
             }
         }
 
-        return $this->view('/auth/register', compact('input', 'errors'));
+        $this->view('/auth/register', compact('input', 'errors'));
     }
 
     public function login()
     {
+        if ($this->auth->check()) {
+            $this->redirect('/');
+        }
+
         $errors = [];
         $input = [
             'email' => '',
@@ -108,7 +115,7 @@ class AuthController extends Controller
             }
         }
 
-        return $this->view('/auth/login', compact('input', 'errors'));
+        $this->view('/auth/login', compact('input', 'errors'));
     }
 
     public function logout()

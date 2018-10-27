@@ -15,6 +15,6 @@ class TestController extends Controller
 
         echo $id;
 
-        return $this->view('index', compact('articles'));
+        $this->view('index', compact('articles'));
     }
 }

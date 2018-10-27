@@ -57,6 +57,11 @@
                 <?php else: ?>
                 <div class="navbar-item">
                     <div class="buttons">
+                        <?php if ($this->auth->hasRole(1)): ?>
+                        <a class="button is-danger is-small" href="<?=getenv('BASE_URL') . "/admin";?>">
+                            <strong>Admin</strong>
+                        </a>
+                        <?php endif;?>
                         <a class="button is-dark is-small" href="<?=getenv('BASE_URL') . "/logout";?>">
                             <strong>Log out</strong>
                         </a>

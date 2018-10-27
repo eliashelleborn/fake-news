@@ -13,11 +13,16 @@ $dotenv->load();
 // ===== ROUTING =====
 $router = new Router();
 
+// Main Pages
 $router->route('/', 'HomeController@index');
 
+// Authentication
 $router->route('/login', 'AuthController@login');
 $router->route('/register', 'AuthController@register');
 $router->route('/logout', 'AuthController@logout');
+
+// Admin
+$router->route('/admin', 'Admin\ArticlesController@index');
 
 $router->route('/test/:id', 'TestController@index');
 

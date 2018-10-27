@@ -11,15 +11,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $user = null;
-
+        // If logged in -> get user
         if ($this->auth->check()) {
-            $user = $this->auth->getUser();
+            $this->auth->getUser();
         }
 
         $articleModel = new Article();
         $articles = $articleModel->getNewsFeed();
 
-        return $this->view('index', compact('articles', 'user'));
+        $this->view('index', compact('articles'));
     }
 }

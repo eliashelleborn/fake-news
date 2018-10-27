@@ -67,7 +67,6 @@ class Router
     public function getController(array $route)
     {
         // Require and create controller instance
-        // require_once dirname(__DIR__) . '/app/controllers/' . $route['controller'] . '.php';
         $className = $route['controller'];
         $controllerNamespace = "App\Controllers\\$className";
         $this->controller = new $controllerNamespace;

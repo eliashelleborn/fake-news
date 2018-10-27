@@ -1,0 +1,62 @@
+Highest Priority:
+  ☐ Homepage content & style
+  ☐ Single article page
+  ☐ Admin dashboard
+  ☐ Author page (all articles by user)
+  ☐ Like counter ("Fake")
+
+  User roles system:
+    ☐ Member, Writer, Admin
+    ☐ Members can like articles (and write comments)
+    ☐ Writers can only edit/delete their own articles
+    ☐ Admins can edit/delete all articles aswell as users
+
+
+Extra (If I have time):
+  ☐ WISYWIG Editor for articles
+  ☐ Connect like counter to database
+  ☐ Comments
+  ☐ Search (articles & authors/writers)
+
+
+Check before submitting project:
+  ☐ Declare strict types
+  ☐ Function type declarations
+  ☐ No PHP errors
+
+
+From assignment README:
+  The project should use the following PHP functionality:
+
+  ✔ Variables @done(18-10-27 18:38)
+  ✔ Multiple data types @done(18-10-27 18:38)
+  ✔ Arrays @done(18-10-27 18:38)
+  ✔ Functions @done(18-10-27 18:38)
+  ✔ Loops (for, while or foreach) @done(18-10-27 18:38)
+  ✔ Concatenation @done(18-10-27 18:49)
+  ✔ Output (echo, print etc.) @done(18-10-27 18:39)
+  ☐ The project should be written in PHP, HTML, CSS and JavaScript only.
+      Sass?
+      Note: You may not use any other programming languages.
+
+  ☐ The project's PHP files should declare strict types.
+
+  ☐ The project should implement nice looking graphical user interface.
+      Note: You may use Bootstrap if you want to.
+
+  ☐ The project can't contain any PHP errors, warning or notices.
+      Tip: If you haven't already, update your php.ini configuration to display errors.
+
+  ☐ The project must be tested on at least two of your classmates computers.
+      Note: Add the testers name to the README.md file.
+
+  ✔ The repository should have at least 10 commits and not just one big commit. @done(18-10-27 18:38)
+
+  ☐ The repository must contain a README.md file with installation instructions and documentation.
+      Tip: Visit awesome-readme to see a list of well written README.md files.
+
+  ✔ The repository must contain a LICENSE file. @done(18-10-27 18:38)
+      Note: This is important when working with open-source software.
+
+  ✔ The repository must contain a .editorconfig file with your preferred settings. @done(18-10-27 18:38)
+      Tip: Don't forget to install the EditorConfig package for Atom or your editor of choice.

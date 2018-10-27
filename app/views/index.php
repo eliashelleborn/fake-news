@@ -2,8 +2,8 @@
 
     <section class="section">
         <div class="container">
-            <?php if (isset($user)): ?>
-            <small>Logged in as: <?=$user['email']?></small>
+            <?php if (isset($this->auth->user)): ?>
+            <small>Logged in as: <?=$this->auth->user['email']?></small>
             <?php endif;?>
 
             <div>

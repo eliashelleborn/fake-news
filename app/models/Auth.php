@@ -8,14 +8,14 @@ use App\Core\Model;
 
 class Auth extends Model
 {
-    private $user = null;
+    public $user = null;
 
     public function check(): bool
     {
         return isset($_SESSION['email']);
     }
 
-    public function getUser(): array
+    public function getUser()
     {
         $userModel = new User();
 
@@ -24,7 +24,14 @@ class Auth extends Model
         } catch (\Exception $e) {
             throw $e;
         }
+    }
 
-        return $this->user;
+    public function hasRole(int $role): bool
+    {
+        if (isset($this->user)) {
+            return $this->user['role'] >= $role;
+        } else {
+            return false;
+        }
     }
 }
