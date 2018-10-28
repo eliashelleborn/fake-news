@@ -8,6 +8,31 @@ use App\Core\Model;
 
 class Article extends Model
 {
+    public function getAll(): array
+    {
+        try {
+            $sql = "SELECT
+                        articles.id,
+                        articles.title,
+                        articles.preview,
+                        articles.body,
+                        articles.banner,
+                        articles.publishDate,
+                        users.name AS author,
+                        users.id AS authorId
+                    FROM
+                        articles
+                        LEFT OUTER JOIN users ON articles.author = users.id
+                    ORDER BY articles.publishDate";
+
+            $res = $this->db->get($sql);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+
+        return $res;
+    }
+
     public function getNewsFeed(): array
     {
         try {
@@ -17,11 +42,13 @@ class Article extends Model
                         articles.preview,
                         articles.body,
                         articles.banner,
+                        articles.publishDate,
                         users.name AS author,
                         users.id AS authorId
                     FROM
                         articles
-                        LEFT OUTER JOIN users ON articles.author = users.id";
+                        LEFT OUTER JOIN users ON articles.author = users.id
+                    ORDER BY articles.publishDate";
 
             $res = $this->db->get($sql);
         } catch (\Exception $e) {

@@ -11,6 +11,9 @@ section.section {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+table.table {
+  font-size: 14px; }
+
 /*! bulma.io v0.7.2 | MIT License | github.com/jgthms/bulma */
 @keyframes spinAround {
   from {

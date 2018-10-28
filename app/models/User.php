@@ -8,6 +8,16 @@ use App\Core\Model;
 
 class User extends Model
 {
+    public function getAll(): array
+    {
+        try {
+            $sql = 'SELECT * FROM users';
+            $users = $this->db->get($sql);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+        return $users;
+    }
 
     public function getById(string $id): array
     {
