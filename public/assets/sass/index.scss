@@ -1,5 +1,144 @@
-@import 'variables';
 @import 'base';
-@import 'home';
-
 @import "../../../node_modules/bulma/bulma.sass";
+
+.featured {
+  display: flex;
+  flex-direction: column;
+
+  &__post {
+    background-color: #3C3C3C;
+    transition: .3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+
+    img {
+      display: block;
+      object-fit: cover;
+      height: 100px;
+      width: 100%;
+      margin: 0;
+    }
+
+    &--big {
+      height: 424px;
+      img {
+        height: 324px;
+      }
+    }
+
+    &--small {
+      min-height: 200px;
+      max-height: 200px;
+
+
+      &:first-child {
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  &__desc {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px;
+    a.title {
+      color: white;
+      margin-bottom: 3px;
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.article-preview {
+  a {
+    display: block;
+  }
+  &:hover p.title {
+    text-decoration: underline;
+  }
+  img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  p, p.title {
+    transition: .3s ease;
+    margin-bottom: 15px;
+    color: black;
+  }
+}
+
+.sidebar {
+  .article-preview {
+    img {
+      height: 75px;
+    }
+    a > * {
+      margin-bottom: 5px;
+    }
+    hr {
+      margin: 10px 0 15px 0;
+    }
+  }
+}
+
+
+.article {
+  .title.is-2 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  &__date {
+    text-align: center;
+  }
+  hr {
+    margin: 10px 0 15px 0;
+  }
+  &__banner {
+    height: 45vh;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  &__body {
+    line-height: 1.6;
+    letter-spacing: 0px;
+  }
+  &__author {
+    width: 400px;
+    background-color: #2F2F2F;
+    height: 125px;
+    position: relative;
+    display: flex;
+    transition: .3s ease;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+    img {
+      height: 125px;
+      object-fit: cover;
+      width: 125px;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      padding: 0 15px;
+      p.title {
+        color: white;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

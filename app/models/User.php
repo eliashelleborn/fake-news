@@ -14,7 +14,7 @@ class User extends Model
         try {
             $sql = 'SELECT * FROM users WHERE id = ?';
             $user = $this->db->getOne($sql, [$id]);
-        } catch (PDOException $e) {
+        } catch (\Exception $e) {
             throw $e;
         }
         return $user;
@@ -25,7 +25,7 @@ class User extends Model
         try {
             $sql = 'SELECT * FROM users WHERE email = ?';
             $user = $this->db->getOne($sql, [$email]);
-        } catch (\Exception $e) {
+        } catch (\PDOException $e) {
             throw $e;
         }
 

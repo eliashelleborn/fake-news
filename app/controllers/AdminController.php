@@ -1,11 +1,11 @@
 <?php
 declare (strict_types = 1);
 
-namespace App\Controllers\Admin;
+namespace App\Controllers;
 
 use App\Core\Controller;
 
-class ArticlesController extends Controller
+class AdminController extends Controller
 {
     public function index()
     {

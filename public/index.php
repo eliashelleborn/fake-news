@@ -14,7 +14,8 @@ $dotenv->load();
 $router = new Router();
 
 // Main Pages
-$router->route('/', 'HomeController@index');
+$router->route('/', 'ArticlesController@index');
+$router->route('/articles/:id', 'ArticlesController@single');
 
 // Authentication
 $router->route('/login', 'AuthController@login');
@@ -22,8 +23,9 @@ $router->route('/register', 'AuthController@register');
 $router->route('/logout', 'AuthController@logout');
 
 // Admin
-$router->route('/admin', 'Admin\ArticlesController@index');
+$router->route('/admin', 'AdminController@index');
 
 $router->route('/test/:id', 'TestController@index');
+$router->route('/404', 'NotFoundController@index');
 
 $router->dispatch();

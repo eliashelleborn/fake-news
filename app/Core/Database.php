@@ -39,15 +39,10 @@ class Database
 
     public function getOne(string $sql, array $args = []): array
     {
-        try {
-            $sth = $this->pdo->prepare($sql);
-            $sth->execute($args);
-            $result = $sth->fetch(PDO::FETCH_ASSOC);
-        } catch (\PDOException $e) {
-            throw new \Exception($e->getMessage());
-        }
-
-        return $result;
+        $sth = $this->pdo->prepare($sql);
+        $sth->execute($args);
+        $result = $sth->fetch(PDO::FETCH_ASSOC);
+        return $result ? $result : [];
     }
 
     public function insert(string $sql, array $args = []): bool

@@ -1,10 +1,10 @@
 Highest Priority:
   ✔ Homepage content & style @done(18-10-27 21:38)
-  ☐ Single article page
+  ✔ Single article page @done(18-10-28 17:04)
   ☐ Admin dashboard
   ☐ Author page (all articles by user)
   ☐ Like counter ("Fake")
-  ✔ Featured Posts ("Fake" to start with) @done(18-10-27 21:36)
+  ✔ Featured Posts ("Fake") @done(18-10-27 21:36)
   ✔ Popular posts sidebar ("Fake") @done(18-10-27 21:37)
 
   User roles system:
@@ -19,6 +19,7 @@ Extra (If I have time):
   ☐ Connect featured posts to database
   ☐ Connect like counter to database
   ☐ Popular posts sidebar depending on likes
+  ☐ More by author (Single article page)
   ☐ Flash messages
   ☐ Comments
   ☐ Search (articles & authors/writers)

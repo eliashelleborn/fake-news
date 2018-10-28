@@ -10,18 +10,40 @@ class Article extends Model
 {
     public function getNewsFeed(): array
     {
-        $sql = "SELECT articles.id, articles.title, articles.preview, articles.body, articles.banner, users.id, users.name AS author
-                FROM articles
-            LEFT OUTER JOIN articles_users
-                ON articles.id = articles_users.article_id
-            LEFT OUTER JOIN users
-                ON articles_users.user_id = users.id";
-
         try {
+            $sql = "SELECT
+                        articles.id,
+                        articles.title,
+                        articles.preview,
+                        articles.body,
+                        articles.banner,
+                        users.name AS author,
+                        users.id AS authorId
+                    FROM
+                        articles
+                        LEFT OUTER JOIN users ON articles.author = users.id";
+
             $res = $this->db->get($sql);
         } catch (\Exception $e) {
             throw $e;
         }
+
         return $res;
     }
+
+    public function getById(string $id): array
+    {
+        try {
+            $sql = "SELECT articles.id, articles.title, articles.preview, articles.body, articles.banner, articles.publishDate, users.image AS authorImg, users.id AS authorId, users.name AS author
+                FROM articles
+            LEFT OUTER JOIN users
+                ON articles.author = users.id
+                WHERE articles.id = ?";
+            $article = $this->db->getOne($sql, [$id]);
+        } catch (PDOException $e) {
+            throw $e;
+        }
+        return $article;
+    }
+
 }

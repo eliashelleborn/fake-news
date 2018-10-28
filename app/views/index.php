@@ -46,7 +46,7 @@
                     <hr>
                     <?php foreach ($articles as $article): ?>
                         <div class="article-preview">
-                            <a href="">
+                            <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                 <img src="<?=$article['banner']?>" alt="">
                                 <p class="title is-3"><?=$article['title']?></p>
                                 <p><?=$article['preview']?></p>
@@ -62,11 +62,11 @@
                     <hr>
                     <?php foreach ($articles as $article): ?>
                         <div class="article-preview">
-                            <a href="">
+                            <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                 <img src="<?=$article['banner']?>" alt="">
                                 <p class="title is-5"><?=$article['title']?></p>
                             </a>
-                            <a href="/" class="is-size-7 has-text-link"><?=$article['author']?></a>
+                            <a href="<?=getenv('BASE_URL') . "/users/" . $article['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
                             <hr>
                         </div>
                     <?php endforeach;?>

@@ -42,7 +42,7 @@ class AuthController extends Controller
                 try {
                     $user = $userModel->getByEmail($input['email']);
                 } catch (\Exception $e) {
-
+                    var_dump($e);
                 }
 
                 if (empty($user)) {
