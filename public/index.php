@@ -16,6 +16,7 @@ $router = new Router();
 // Main Pages
 $router->route('/', 'ArticlesController@index');
 $router->route('/articles/:id', 'ArticlesController@single');
+$router->route('/authors/:id', 'UsersController@single');
 
 // Authentication
 $router->route('/login', 'AuthController@login');
@@ -25,7 +26,6 @@ $router->route('/logout', 'AuthController@logout');
 // Admin
 $router->route('/admin', 'AdminController@index');
 
-$router->route('/test/:id', 'TestController@index');
 $router->route('/404', 'NotFoundController@index');
 
 $router->dispatch();

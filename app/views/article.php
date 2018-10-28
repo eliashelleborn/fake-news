@@ -21,7 +21,7 @@
                     </div>
 
                     <hr>
-                    <a href="<?=getenv('BASE_URL') . "/users/" . $article['authorId']?>" class="article__author">
+                    <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="author-card">
                         <img src="<?=$article['authorImg']?>" alt="">
                         <div>
                             <p class="title is-4"><?=$article['author']?></p>

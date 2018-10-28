@@ -52,7 +52,7 @@
                                 <p><?=$article['preview']?></p>
                             </a>
 
-                            <a href="/"><?=$article['author']?></a>
+                            <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link">by <?=$article['author']?></a>
                         </div>
                         <hr>
                     <?php endforeach;?>
@@ -66,7 +66,7 @@
                                 <img src="<?=$article['banner']?>" alt="">
                                 <p class="title is-5"><?=$article['title']?></p>
                             </a>
-                            <a href="<?=getenv('BASE_URL') . "/users/" . $article['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
+                            <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
                             <hr>
                         </div>
                     <?php endforeach;?>
