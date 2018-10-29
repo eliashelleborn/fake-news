@@ -22,6 +22,8 @@ class AdminController extends Controller
             if (!$this->auth->hasRole(1)) {
                 $this->redirect('/');
             }
+        } else {
+            $this->redirect('/');
         }
 
         // Get all or authenticated users articles
