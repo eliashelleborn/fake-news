@@ -56,4 +56,16 @@ class Database
 
         return $res;
     }
+
+    public function delete(string $sql, array $args = []): bool
+    {
+        try {
+            $sth = $this->pdo->prepare($sql);
+            $res = $sth->execute($args);
+        } catch (\PDOException $e) {
+            throw new \Exception($e->getMessage());
+        }
+
+        return $res;
+    }
 }

@@ -7,6 +7,8 @@ use Dotenv\Dotenv;
 
 session_start();
 
+$_SERVER['DOCUMENT_ROOT'] = dirname(__DIR__);
+
 $dotenv = new Dotenv(dirname(__DIR__));
 $dotenv->load();
 
@@ -25,6 +27,9 @@ $router->route('/logout', 'AuthController@logout');
 
 // Admin
 $router->route('/admin', 'AdminController@index');
+$router->route('/admin/articles/create', 'ArticlesController@create');
+$router->route('/admin/articles/:id/delete', 'ArticlesController@delete');
+$router->route('/admin/articles/:id/edit', 'ArticlesController@edit');
 
 $router->route('/404', 'NotFoundController@index');
 

@@ -23,7 +23,7 @@ class Article extends Model
                     FROM
                         articles
                         LEFT OUTER JOIN users ON articles.author = users.id
-                    ORDER BY articles.publishDate";
+                    ORDER BY articles.publishDate DESC";
 
             $res = $this->db->get($sql);
         } catch (\Exception $e) {
@@ -48,7 +48,7 @@ class Article extends Model
                     FROM
                         articles
                         LEFT OUTER JOIN users ON articles.author = users.id
-                    ORDER BY articles.publishDate";
+                    ORDER BY articles.publishDate DESC";
 
             $res = $this->db->get($sql);
         } catch (\Exception $e) {
@@ -86,6 +86,28 @@ class Article extends Model
             throw $e;
         }
         return $articles;
+    }
+
+    public function create(array $input, string $author): bool
+    {
+        try {
+            $sql = 'INSERT INTO articles ("title", "preview", "body", "banner", "author") VALUES (?,?,?,?,?)';
+            $res = $this->db->insert($sql, array_merge(array_values($input), [$author]));
+        } catch (PDOException $e) {
+            throw $e;
+        }
+        return $res;
+    }
+
+    public function delete(string $id): bool
+    {
+        try {
+            $sql = 'DELETE FROM articles WHERE articles.id = ?';
+            $res = $this->db->delete($sql, [$id]);
+        } catch (PDOException $e) {
+            throw $e;
+        }
+        return $res;
     }
 
 }

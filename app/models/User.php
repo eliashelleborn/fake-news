@@ -47,10 +47,10 @@ class User extends Model
         try {
             $hash = password_hash($user['password'], PASSWORD_BCRYPT);
             $sql = 'INSERT INTO users ("email", "name", "password") VALUES (?,?,?)';
-            $status = $this->db->insert($sql, [$user['email'], $user['username'], $hash]);
+            $res = $this->db->insert($sql, [$user['email'], $user['username'], $hash]);
         } catch (PDOException $e) {
             throw $e;
         }
-        return $status;
+        return $res;
     }
 }

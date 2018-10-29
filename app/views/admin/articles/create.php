@@ -4,57 +4,59 @@
     <div class="container">
         <div class="columns is-centered">
             <div class="column is-half">
-                <p class="title has-text-centered">Register</p>
-                <form action="<?=getenv("BASE_URL")?>/register" method="post">
+                <p class="title has-text-centered">Create Article</p>
+                <form  action="<?=getenv("BASE_URL")?>/admin/articles/create" method="post">
 
                     <div class="field">
-                        <label class="label" for="email">Email</label>
+                        <label class="label" for="title">Title</label>
                         <div class="control">
-                            <input class="input" type="email" name="email" value="<?=htmlspecialchars($input['email'])?>">
+                            <input class="input" type="title" name="title" value="<?=htmlspecialchars($input['title'])?>">
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label" for="username">Username</label>
+                        <label class="label" for="preview">Preview</label>
                         <div class="control">
-                            <input class="input" type="text" name="username" value="<?=htmlspecialchars($input['username'])?>">
+                            <textarea class="textarea" type="preview" name="preview" value="<?=htmlspecialchars($input['preview'])?>"></textarea>
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label" for="password">Password</label>
+                        <label class="label" for="body">Body</label>
                         <div class="control">
-                            <input class="input" type="password" name="password" value="<?=htmlspecialchars($input['password'])?>">
+                            <textarea class="textarea" type="body" name="body" value="<?=htmlspecialchars($input['body'])?>"></textarea>
                         </div>
                     </div>
                     <div class="field">
-                        <label class="label" for="confirmPassword">Confirm Password</label>
+                        <label class="label" for="banner">Banner</label>
                         <div class="control">
-                            <input class="input" type="password" name="confirmPassword" value="<?=htmlspecialchars($input['confirmPassword'])?>">
+                            <input class="input" type="banner" name="banner" value="<?=htmlspecialchars($input['banner'])?>">
                         </div>
                     </div>
                     <div class="field">
                         <div class="control">
-                            <button class="button is-dark" type="submit">Register</button>
+                            <button class="button is-dark" type="submit">Create</button>
                         </div>
                     </div>
 
                 </form>
-
             </div>
-
         </div>
+
         <?php if (!empty($errors)): ?>
-            <div class="columns is-centered">
-                <div class="notification is-danger column is-half">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <div class="notification is-danger">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                         <li>
-                            - <?=$error?>
+                            <?=$error?>
                         </li>
                         <?php endforeach;?>
                     </ul>
                 </div>
             </div>
+        </div>
         <?php endif;?>
+
     </div>
 </div>
 

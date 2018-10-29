@@ -1,4 +1,4 @@
-<?php require_once dirname(__DIR__) . "/components/header.php";?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
 
     <section class="section">
         <div class="container">
@@ -8,7 +8,7 @@
 
             <div class="is-flex" style="justify-content: space-between;">
                 <p class="title is-4">Articles</p>
-                <a class="button is-success is-small" href="<?=getenv('BASE_URL') . "/admin";?>">
+                <a class="button is-success is-small" href="<?=getenv('BASE_URL') . "/admin/articles/create";?>">
                     <strong>Create Article</strong>
                 </a>
             </div>
@@ -34,7 +34,7 @@
                                 <a class="button is-dark is-small" href="<?=getenv('BASE_URL') . "/admin";?>">
                                     <strong>Edit</strong>
                                 </a>
-                                <a class="button is-danger is-small" href="<?=getenv('BASE_URL') . "/admin";?>">
+                                <a class="button is-danger is-small" href="<?=getenv('BASE_URL') . "/admin/articles/" . $article['id'] . '/delete';?>">
                                     <strong>Delete</strong>
                                 </a>
                             </th>
@@ -84,7 +84,7 @@
         </div>
     </section>
 
-<?php require_once dirname(__DIR__) . "/components/footer.php";?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/footer.php";?>
 
 
 

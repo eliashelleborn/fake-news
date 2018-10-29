@@ -9,7 +9,7 @@ Highest Priority:
   ☐ CRUD (Articles & Users)
 
   User roles system:
-    ☐ Member, Writer, Admin
+    ✔ Member, Writer, Admin @done(18-10-29 21:19)
     ☐ Members can like articles (and write comments)
     ☐ Writers can only edit/delete their own articles
     ☐ Admins can edit/delete all articles aswell as users
