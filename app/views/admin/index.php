@@ -28,10 +28,10 @@
                             <th><?=$article['author']?></th>
                             <th><?=$article['publishDate']?></th>
                             <th>
-                                <a class="button is-light is-small" href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>">
+                                <a class="button is-light is-small" href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                     <strong>View</strong>
                                 </a>
-                                <a class="button is-dark is-small" href="<?=getenv('BASE_URL') . "/admin";?>">
+                                <a class="button is-dark is-small" href="<?=getenv('BASE_URL') . "/admin/articles/" . $article['id'] . '/edit';?>">
                                     <strong>Edit</strong>
                                 </a>
                                 <a class="button is-danger is-small" href="<?=getenv('BASE_URL') . "/admin/articles/" . $article['id'] . '/delete';?>">

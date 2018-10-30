@@ -99,6 +99,17 @@ class Article extends Model
         return $res;
     }
 
+    public function edit(string $id, array $input): bool
+    {
+        try {
+            $sql = 'UPDATE articles SET "title" = ?, "preview" = ?, "body" = ?, "banner" = ? WHERE id = ?';
+            $res = $this->db->edit($sql, array_merge(array_values($input), [$id]));
+        } catch (PDOException $e) {
+            throw $e;
+        }
+        return $res;
+    }
+
     public function delete(string $id): bool
     {
         try {

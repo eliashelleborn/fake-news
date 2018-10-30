@@ -6,13 +6,13 @@ Highest Priority:
   ☐ Like counter ("Fake")
   ✔ Featured Posts ("Fake") @done(18-10-27 21:36)
   ✔ Popular posts sidebar ("Fake") @done(18-10-27 21:37)
-  ☐ CRUD (Articles & Users)
+  ✔ CRUD - Articles @done(18-10-30 11:54)
 
   User roles system:
     ✔ Member, Writer, Admin @done(18-10-29 21:19)
     ☐ Members can like articles (and write comments)
-    ☐ Writers can only edit/delete their own articles
-    ☐ Admins can edit/delete all articles aswell as users
+    ✔ Writers can only edit/delete their own articles @done(18-10-30 11:54)
+    ✔ Admins can edit/delete all articles @done(18-10-30 11:54)
 
 
 Extra (If I have time):
@@ -23,6 +23,7 @@ Extra (If I have time):
   ☐ Popular posts sidebar depending on likes
   ☐ More by author (Single article page)
   ☐ Flash messages
+  ☐ CRUD - Users
   ☐ Comments
   ☐ Search (articles & authors/writers)
   ☐ Pagination
@@ -32,6 +33,7 @@ Check before submitting project:
   ☐ Declare strict types
   ☐ Function type declarations
   ☐ No PHP errors
+  ☐ Fix folder names on github (capitalize)
 
 
 From assignment README:
