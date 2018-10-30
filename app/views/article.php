@@ -13,6 +13,10 @@
                     <div class="columns">
                         <div class="column">
                             <p class="article__body"><?=$article['body']?></p>
+                            <button id="like-btn">
+                                <i class="far fa-heart"></i>
+                                <span>32</span>
+                            </button>
                         </div>
                         <div class="column is-3">
                             <p class="title is-6">More by author</p>
