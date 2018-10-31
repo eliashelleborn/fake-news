@@ -10,7 +10,7 @@ Highest Priority:
 
   User roles system:
     ✔ Member, Writer, Admin @done(18-10-29 21:19)
-    ☐ Members can like articles (and write comments)
+    ✔ Members can like articles (and write comments) @done(18-10-31 11:26)
     ✔ Writers can only edit/delete their own articles @done(18-10-30 11:54)
     ✔ Admins can edit/delete all articles @done(18-10-30 11:54)
 
@@ -19,17 +19,17 @@ Extra (If I have time):
   Highest Priority:
     ☐ Split admin page up (Articles and users on different pages)
       // Or remove users from admin dashboard if not doing CRUD for them
-    ☐ Connect featured posts to database @started(18-10-30 16:14)
+    ✔ Connect featured posts to database @done(18-10-31 11:26)
     ☐ Connect like counter to database
     ☐ Popular posts sidebar depending on likes
-    ☐ WISYWIG Editor for articles
+    ✘ WISYWIG Editor for @cancelled(18-10-31 11:26)
 
   ✔ More by author (Single article page) @done(18-10-30 16:21)
   ☐ CRUD - Users
-  ☐ Flash messages
-  ☐ Comments
+  ✘ Flash messages @cancelled(18-10-31 11:26)
+  ✘ Comments @cancelled(18-10-31 11:26)
   ☐ Search (articles & authors/writers)
-  ☐ Pagination
+  ✘ Pagination @cancelled(18-10-31 11:26)
 
 
 Check before submitting project:
@@ -38,6 +38,7 @@ Check before submitting project:
   ☐ No PHP errors
   ☐ Fix folder names on github (capitalize)
   ☐ Sanitize, validate & htmlspecialchars
+  ☐ README.md
 
 
 From assignment README:

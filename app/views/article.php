@@ -18,7 +18,7 @@
                                 <span>32</span>
                             </button>
                         </div>
-                        <div class="column is-3">
+                        <div class="column is-3 sidebar">
                             <p class="title is-6">More by author</p>
                             <hr>
                             <?php foreach ($articlesByAuthor as $articleByAuthor): ?>
