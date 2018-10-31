@@ -28,7 +28,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                                 <div class="article-preview">
                                     <a href="<?=getenv('BASE_URL') . "/articles/" . $articleByAuthor['id']?>">
                                         <img src="<?=$articleByAuthor['banner']?>" alt="">
-                                        <p class="title is-5"><?=$article['title']?></p>
+                                        <p class="title is-5"><?=$articleByAuthor['title']?></p>
                                     </a>
                                     <a href="<?=getenv('BASE_URL') . "/authors/" . $articleByAuthor['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
                                     <hr>

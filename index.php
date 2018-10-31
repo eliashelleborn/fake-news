@@ -2,16 +2,16 @@
 
 declare (strict_types = 1);
 
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use App\Core\Router;
 use Dotenv\Dotenv;
 
 session_start();
 
-$_SERVER['DOCUMENT_ROOT'] = dirname(__DIR__);
+$_SERVER['DOCUMENT_ROOT'] = __DIR__;
 
-$dotenv = new Dotenv(dirname(__DIR__));
+$dotenv = new Dotenv(__DIR__);
 $dotenv->load();
 
 // ===== ROUTING =====

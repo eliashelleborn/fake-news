@@ -17,7 +17,7 @@ class Database
     public function connect()
     {
         try {
-            $pdo = new PDO('sqlite:../FakeNews.db');
+            $pdo = new PDO('sqlite:./FakeNews.db');
         } catch (\PDOException $e) {
             throw new \PDOException($e->getMessage(), (int) $e->getCode());
         }
