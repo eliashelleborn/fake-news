@@ -31,5 +31,3 @@ Both can create new articles.
 - Linn Johansson
 - André Broman
 
-Tested on mac and windows.
-
