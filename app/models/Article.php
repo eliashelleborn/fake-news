@@ -33,6 +33,33 @@ class Article extends Model
         return $res;
     }
 
+    public function getFeatured(int $limit = 3): array
+    {
+        try {
+            $sql = "SELECT
+                        articles.id,
+                        articles.title,
+                        articles.preview,
+                        articles.body,
+                        articles.banner,
+                        articles.publishDate,
+                        users.name AS author,
+                        users.id AS authorId
+                    FROM
+                        articles
+                        LEFT OUTER JOIN users ON articles.author = users.id
+                    WHERE articles.featured = 1
+                    ORDER BY articles.publishDate DESC
+                    LIMIT ?";
+
+            $res = $this->db->get($sql, [$limit]);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+
+        return $res;
+    }
+
     public function getNewsFeed(): array
     {
         try {

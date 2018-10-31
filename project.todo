@@ -8,8 +8,6 @@ Highest Priority:
   ✔ Popular posts sidebar ("Fake") @done(18-10-27 21:37)
   ✔ CRUD - Articles @done(18-10-30 11:54)
 
-  ☐ Connect featured posts to database
-
   User roles system:
     ✔ Member, Writer, Admin @done(18-10-29 21:19)
     ☐ Members can like articles (and write comments)
@@ -18,14 +16,17 @@ Highest Priority:
 
 
 Extra (If I have time):
-  ☐ Split admin page up (Articles and users on different pages)
-    // Or remove users if not doing CRUD for them
-  ☐ WISYWIG Editor for articles
-  ☐ Connect like counter to database
-  ☐ Popular posts sidebar depending on likes
-  ☐ More by author (Single article page)
-  ☐ Flash messages
+  Highest Priority:
+    ☐ Split admin page up (Articles and users on different pages)
+      // Or remove users from admin dashboard if not doing CRUD for them
+    ☐ Connect featured posts to database @started(18-10-30 16:14)
+    ☐ Connect like counter to database
+    ☐ Popular posts sidebar depending on likes
+    ☐ WISYWIG Editor for articles
+
+  ✔ More by author (Single article page) @done(18-10-30 16:21)
   ☐ CRUD - Users
+  ☐ Flash messages
   ☐ Comments
   ☐ Search (articles & authors/writers)
   ☐ Pagination
@@ -36,6 +37,7 @@ Check before submitting project:
   ☐ Function type declarations
   ☐ No PHP errors
   ☐ Fix folder names on github (capitalize)
+  ☐ Sanitize, validate & htmlspecialchars
 
 
 From assignment README:
@@ -54,7 +56,7 @@ From assignment README:
 
   ☐ The project's PHP files should declare strict types.
 
-  ☐ The project should implement nice looking graphical user interface.
+  ✔ The project should implement nice looking graphical user interface. @done(18-10-30 13:08)
       Note: You may use Bootstrap if you want to.
 
   ☐ The project can't contain any PHP errors, warning or notices.

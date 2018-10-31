@@ -18,15 +18,16 @@ if ($navbarBurgers.length > 0) {
 
 // LIKE BUTTON
 const likeBtn = document.getElementById('like-btn');
-likeBtn.addEventListener('click', () => {
-  const icon = likeBtn.firstElementChild;
-  const count = likeBtn.lastElementChild;
-  if (icon.classList.contains('fas')) {
-    count.innerText = parseInt(count.innerText) - 1;
-  } else {
-    count.innerText = parseInt(count.innerText) + 1;
-  }
-  icon.classList.toggle('fas');
+if (likeBtn) {
+  likeBtn.addEventListener('click', () => {
+    const icon = likeBtn.firstElementChild;
+    const count = likeBtn.lastElementChild;
+    if (icon.classList.contains('fas')) {
+      count.innerText = parseInt(count.innerText) - 1;
+    } else {
+      count.innerText = parseInt(count.innerText) + 1;
+    }
+    icon.classList.toggle('fas');
+  })
+}
 
-
-})

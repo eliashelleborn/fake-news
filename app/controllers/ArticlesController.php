@@ -18,8 +18,9 @@ class ArticlesController extends Controller
 
         $articleModel = new Article();
         $articles = $articleModel->getNewsFeed();
+        $featuredArticles = $articleModel->getFeatured();
 
-        $this->view('index', compact('articles'));
+        $this->view('index', compact('articles', 'featuredArticles'));
     }
 
     public function single(string $id)
@@ -31,12 +32,13 @@ class ArticlesController extends Controller
 
         $articleModel = new Article();
         $article = $articleModel->getById($id);
+        $articlesByAuthor = $articleModel->getByAuthor($article['authorId']);
 
         if (empty($article)) {
             $this->redirect('/404');
         }
 
-        $this->view('article', compact('article'));
+        $this->view('article', compact('article', 'articlesByAuthor'));
     }
 
     public function create()

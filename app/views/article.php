@@ -21,6 +21,18 @@
                         <div class="column is-3">
                             <p class="title is-6">More by author</p>
                             <hr>
+                            <?php foreach ($articlesByAuthor as $articleByAuthor): ?>
+                            <?php if ($articleByAuthor !== $article): ?>
+                                <div class="article-preview">
+                                    <a href="<?=getenv('BASE_URL') . "/articles/" . $articleByAuthor['id']?>">
+                                        <img src="<?=$articleByAuthor['banner']?>" alt="">
+                                        <p class="title is-5"><?=$article['title']?></p>
+                                    </a>
+                                    <a href="<?=getenv('BASE_URL') . "/authors/" . $articleByAuthor['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
+                                    <hr>
+                                </div>
+                            <?php endif;?>
+                            <?php endforeach;?>
                         </div>
                     </div>
 
