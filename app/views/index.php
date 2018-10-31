@@ -56,7 +56,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                     <?php if (!in_array($article, $featuredArticles)): ?>
                         <div class="article-preview">
                             <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
-                                <img src="<?=$article['banner']?>" alt="">
+                                <img class="is-marginless" src="<?=$article['banner']?>" alt="">
+                                <p class="is-marginless"><?=date("d M - g:i a", strtotime($article['publishDate']))?></p>
                                 <p class="title is-3"><?=$article['title']?></p>
                                 <p><?=$article['preview']?></p>
                             </a>
@@ -70,8 +71,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                 <div class="column is-4 sidebar">
                     <p style="margin-top: 18px;" class="title title is-4">Popular</p>
                     <hr>
-                    <?php foreach ($articles as $article): ?>
-                    <?php if (!in_array($article, $featuredArticles)): ?>
+                    <?php foreach ($popularArticles as $article): ?>
                         <div class="article-preview">
                             <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                 <img src="<?=$article['banner']?>" alt="">
@@ -80,7 +80,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                             <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
                             <hr>
                         </div>
-                    <?php endif;?>
                     <?php endforeach;?>
                 </div>
             </div>

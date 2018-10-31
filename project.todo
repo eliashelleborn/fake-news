@@ -7,8 +7,7 @@ Highest Priority:
   ✔ Featured Posts ("Fake") @done(18-10-27 21:36)
   ✔ Popular posts sidebar ("Fake") @done(18-10-27 21:37)
   ✔ CRUD - Articles @done(18-10-30 11:54)
-  ☐ 404 page styling
-  ☐ Like button styling
+  ☐ Remove unnessecary navbar stuff
 
   User roles system:
     ✔ Member, Writer, Admin @done(18-10-29 21:19)
@@ -19,22 +18,22 @@ Highest Priority:
 
 Extra (If I have time):
   Highest Priority:
-    ☐ Split admin page up (Articles and users on different pages)
-      // Or remove users from admin dashboard if not doing CRUD for them
+    ✘ Split admin page up (Articles and users on different pages) @cancelled(18-10-31 19:27)
+      ✔ // Or remove users from admin dashboard if not doing CRUD for them @done(18-10-31 19:27)
     ✔ Connect featured posts to database @done(18-10-31 11:26)
-    ☐ Connect like counter to database
-    ☐ Popular posts sidebar depending on likes
+    ✔ Popular posts sidebar depending on likes @done(18-10-31 19:27)
     ✘ WISYWIG Editor for @cancelled(18-10-31 11:26)
 
   ✔ More by author (Single article page) @done(18-10-30 16:21)
-  ☐ CRUD - Users
+  ✘ CRUD - Users @cancelled(18-10-31 19:27)
   ✘ Flash messages @cancelled(18-10-31 11:26)
   ✘ Comments @cancelled(18-10-31 11:26)
-  ☐ Search (articles & authors/writers)
+  ✘ Search (articles & authors/writers) @cancelled(18-10-31 19:27)
   ✘ Pagination @cancelled(18-10-31 11:26)
 
 
 Check before submitting project:
+  ☐ Content: 5 authors, 2 articles each (minimum)
   ☐ Declare strict types
   ☐ Function type declarations
   ☐ No PHP errors

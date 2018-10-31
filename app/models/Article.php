@@ -60,6 +60,33 @@ class Article extends Model
         return $res;
     }
 
+    public function getPopular(int $limit = 5): array
+    {
+        try {
+            $sql = "SELECT
+                        articles.id,
+                        articles.title,
+                        articles.preview,
+                        articles.body,
+                        articles.banner,
+                        articles.publishDate,
+                        articles.likes,
+                        users.name AS author,
+                        users.id AS authorId
+                    FROM
+                        articles
+                        LEFT OUTER JOIN users ON articles.author = users.id
+                    ORDER BY articles.likes DESC
+                    LIMIT ?";
+
+            $res = $this->db->get($sql, [$limit]);
+        } catch (\Exception $e) {
+            throw $e;
+        }
+
+        return $res;
+    }
+
     public function getNewsFeed(): array
     {
         try {
@@ -88,7 +115,7 @@ class Article extends Model
     public function getById(string $id): array
     {
         try {
-            $sql = "SELECT articles.id, articles.title, articles.preview, articles.body, articles.banner, articles.publishDate, users.image AS authorImg, users.id AS authorId, users.name AS author
+            $sql = "SELECT articles.id, articles.title, articles.preview, articles.body, articles.banner, articles.publishDate, articles.likes, users.image AS authorImg, users.id AS authorId, users.name AS author
                 FROM articles
             LEFT OUTER JOIN users
                 ON articles.author = users.id

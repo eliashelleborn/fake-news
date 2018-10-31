@@ -175,3 +175,19 @@
   }
 }
 
+.like-btn {
+  border: none;
+  background: none;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px;
+  span {
+    margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, .05);
+  }
+}

@@ -33,15 +33,18 @@ class Database
         } catch (\PDOException $e) {
             throw new \Exception($e->getMessage());
         }
-
         return $result;
     }
 
     public function getOne(string $sql, array $args = []): array
     {
-        $sth = $this->pdo->prepare($sql);
-        $sth->execute($args);
-        $result = $sth->fetch(PDO::FETCH_ASSOC);
+        try {
+            $sth = $this->pdo->prepare($sql);
+            $sth->execute($args);
+            $result = $sth->fetch(PDO::FETCH_ASSOC);
+        } catch (\PDOException $e) {
+            throw new \Exception($e->getMessage());
+        }
         return $result ? $result : [];
     }
 

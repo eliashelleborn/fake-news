@@ -17,7 +17,7 @@ if ($navbarBurgers.length > 0) {
 }
 
 // LIKE BUTTON
-const likeBtn = document.getElementById('like-btn');
+const likeBtn = document.querySelector('.like-btn');
 if (likeBtn) {
   likeBtn.addEventListener('click', () => {
     const icon = likeBtn.firstElementChild;
@@ -30,4 +30,6 @@ if (likeBtn) {
     icon.classList.toggle('fas');
   })
 }
+
+
 

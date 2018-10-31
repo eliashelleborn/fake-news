@@ -15,9 +15,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                     <div class="columns">
                         <div class="column">
                             <p class="article__body"><?=$article['body']?></p>
-                            <button id="like-btn">
+                            <button class="like-btn">
                                 <i class="far fa-heart"></i>
-                                <span>32</span>
+                                <span><?=$article['likes']?></span>
                             </button>
                         </div>
                         <div class="column is-3 sidebar">

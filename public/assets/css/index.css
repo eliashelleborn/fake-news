@@ -6891,3 +6891,17 @@ label.panel-block {
     line-height: 1.4;
     font-size: 15px;
     color: white; }
+
+.like-btn {
+  border: none;
+  background: none;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px;
+  border-radius: 5px; }
+  .like-btn span {
+    margin-left: 5px; }
+  .like-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05); }

@@ -19,8 +19,9 @@ class ArticlesController extends Controller
         $articleModel = new Article();
         $articles = $articleModel->getNewsFeed();
         $featuredArticles = $articleModel->getFeatured();
+        $popularArticles = $articleModel->getPopular();
 
-        $this->view('index', compact('articles', 'featuredArticles'));
+        $this->view('index', compact('articles', 'featuredArticles', 'popularArticles'));
     }
 
     public function single(string $id)
