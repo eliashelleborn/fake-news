@@ -1,5 +1,5 @@
 # Fake News
-This project is a news website. 
+This project is a news website.
 It contains the following features:
 - Authentication with simple roles system
 - Articles CRUD
@@ -15,6 +15,8 @@ It contains the following features:
 
 NOTE
   >If you decide to rename the project folder you also have to switch out the "BASE_URL" in the ".env" file. Just switch out the "/fake-news" part with the new name.
+
+  >Same as above if you are using another port than :8888
   
   >The website will only work when served with Apache due to the use of .htaccess files
 
@@ -28,4 +30,6 @@ Both can create new articles.
 ### User tests: 
 - Linn Johansson
 - André Broman
+
+Tested on mac and windows.
 
