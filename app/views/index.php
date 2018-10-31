@@ -58,11 +58,11 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                             <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                 <img class="is-marginless" src="<?=$article['banner']?>" alt="">
                                 <p class="is-marginless"><?=date("d M - g:i a", strtotime($article['publishDate']))?></p>
-                                <p class="title is-3"><?=$article['title']?></p>
-                                <p><?=$article['preview']?></p>
+                                <p class="title is-3"><?=htmlspecialchars($article['title'])?></p>
+                                <p><?=htmlspecialchars($article['preview'])?></p>
                             </a>
 
-                            <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link">by <?=$article['author']?></a>
+                            <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link">by <?=htmlspecialchars($article['author'])?></a>
                         </div>
                         <hr>
                     <?php endif;?>
@@ -75,9 +75,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                         <div class="article-preview">
                             <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                 <img src="<?=$article['banner']?>" alt="">
-                                <p class="title is-5"><?=$article['title']?></p>
+                                <p class="title is-5"><?=htmlspecialchars($article['title'])?></p>
                             </a>
-                            <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link"><?=$article['author']?></a>
+                            <a href="<?=getenv('BASE_URL') . "/authors/" . $article['authorId']?>" class="is-size-7 has-text-link"><?=htmlspecialchars($article['author'])?></a>
                             <hr>
                         </div>
                     <?php endforeach;?>

@@ -33,7 +33,7 @@ class ComposerStaticInit37486898834b24ffce540a7ae0712e7c
         'App\\Controllers\\ArticlesController' => __DIR__ . '/../..' . '/app/Controllers/ArticlesController.php',
         'App\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Controllers/AuthController.php',
         'App\\Controllers\\NotFoundController' => __DIR__ . '/../..' . '/app/Controllers/NotFoundController.php',
-        'App\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/Controllers/TestController.php',
+        'App\\Controllers\\UsersController' => __DIR__ . '/../..' . '/app/Controllers/UsersController.php',
         'App\\Core\\Controller' => __DIR__ . '/../..' . '/app/Core/Controller.php',
         'App\\Core\\Database' => __DIR__ . '/../..' . '/app/Core/Database.php',
         'App\\Core\\Model' => __DIR__ . '/../..' . '/app/Core/Model.php',

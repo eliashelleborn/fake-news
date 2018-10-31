@@ -35,6 +35,10 @@ class AuthController extends Controller
                 }
             }
 
+            if (!filter_var($input['email'], FILTER_VALIDATE_EMAIL)) {
+                $errors[] = 'Email given is not valid.';
+            }
+
             if (count($errors) === 0) {
                 // See if user with email already exists
                 $userModel = new User();

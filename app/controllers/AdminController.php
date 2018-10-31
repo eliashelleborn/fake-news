@@ -38,14 +38,4 @@ class AdminController extends Controller
 
         $this->view('/admin/index', compact('articles', 'users'));
     }
-
-    public function articles()
-    {
-
-    }
-
-    public function users()
-    {
-
-    }
 }

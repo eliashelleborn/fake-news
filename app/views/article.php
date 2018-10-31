@@ -6,7 +6,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
         <div class="container">
             <div class="columns">
                 <div class="column article">
-                    <p class="title is-2"><?=$article['title']?></p>
+                    <p class="title is-2"><?=htmlspecialchars($article['title'])?></p>
                     <p class="article__date">
                         <?=date("d M - g:i a", strtotime($article['publishDate']))?>
                     </p>

@@ -12,8 +12,8 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                         <div class="article-preview">
                             <a href="<?=getenv('BASE_URL') . "/articles/" . $article['id']?>">
                                 <img src="<?=$article['banner']?>" alt="">
-                                <p class="title is-3"><?=$article['title']?></p>
-                                <p><?=$article['preview']?></p>
+                                <p class="title is-3"><?=htmlspecialchars($article['title'])?></p>
+                                <p><?=htmlspecialchars($article['preview'])?></p>
                             </a>
                         </div>
                         <hr>
@@ -25,7 +25,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . "/app/Views/components/header.php";?>
                     <div class="author-card author-card--vertical">
                         <img src="<?=$user['image']?>" alt="">
                         <div>
-                            <p class="title is-4"><?=$user['name']?></p>
+                            <p class="title is-4"><?=htmlspecialchars($user['name'])?></p>
                             <p class="title is-6">Writer</p>
                             <hr>
                             <p>

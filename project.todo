@@ -7,7 +7,6 @@ Highest Priority:
   ✔ Featured Posts ("Fake") @done(18-10-27 21:36)
   ✔ Popular posts sidebar ("Fake") @done(18-10-27 21:37)
   ✔ CRUD - Articles @done(18-10-30 11:54)
-  ☐ Remove unnessecary navbar stuff
 
   User roles system:
     ✔ Member, Writer, Admin @done(18-10-29 21:19)
@@ -33,13 +32,11 @@ Extra (If I have time):
 
 
 Check before submitting project:
-  ☐ Content: 5 authors, 2 articles each (minimum)
-  ☐ Declare strict types
-  ☐ Function type declarations
-  ☐ No PHP errors
-  ☐ Fix folder names on github (capitalize)
-  ☐ Sanitize, validate & htmlspecialchars
-  ☐ README.md
+  ✔ Content: 5 authors, 2 articles each (minimum) @done(18-10-31 20:39)
+  ✔ Declare strict types @done(18-10-31 20:42)
+  ✔ Function type declarations @done(18-10-31 20:45)
+  ✔ No PHP errors @done(18-10-31 20:45)
+  ✔ README.md @done(18-10-31 20:45)
 
 
 From assignment README:
@@ -56,20 +53,20 @@ From assignment README:
       Sass?
       Note: You may not use any other programming languages.
 
-  ☐ The project's PHP files should declare strict types.
+  ✔ The project's PHP files should declare strict types. @done(18-10-31 20:45)
 
   ✔ The project should implement nice looking graphical user interface. @done(18-10-30 13:08)
       Note: You may use Bootstrap if you want to.
 
-  ☐ The project can't contain any PHP errors, warning or notices.
+  ✔ The project can't contain any PHP errors, warning or notices. @done(18-10-31 20:45)
       Tip: If you haven't already, update your php.ini configuration to display errors.
 
-  ☐ The project must be tested on at least two of your classmates computers.
+  ✔ The project must be tested on at least two of your classmates computers. @done(18-10-31 20:46)
       Note: Add the testers name to the README.md file.
 
   ✔ The repository should have at least 10 commits and not just one big commit. @done(18-10-27 18:38)
 
-  ☐ The repository must contain a README.md file with installation instructions and documentation.
+  ✔ The repository must contain a README.md file with installation instructions and documentation. @done(18-10-31 20:40)
       Tip: Visit awesome-readme to see a list of well written README.md files.
 
   ✔ The repository must contain a LICENSE file. @done(18-10-27 18:38)
