@@ -26,7 +26,11 @@ class Router
     {
         $route = null;
         // Split url [controller, method, param, param ...]
-        $url = isset($_GET['url']) ? explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL)) : [];
+        $url = explode('/', $_SERVER['REQUEST_URI']);
+        if (($key = array_search(basename($_SERVER['DOCUMENT_ROOT']), $url)) !== false) {
+            unset($url[$key]);
+        }
+        $url = array_values(array_filter($url, 'strlen'));
         $route = $this->match($url);
 
         $this->getController($route);
@@ -38,9 +42,9 @@ class Router
 
     public function match(array $url): array
     {
-        array_unshift($url, "");
         foreach ($this->routes as $route) {
-            $splitRoute = explode('/', filter_var(rtrim($route['route'], '/'), FILTER_SANITIZE_URL));
+            $splitRoute = explode('/', trim($route['route']));
+            $splitRoute = array_values(array_filter($splitRoute, 'strlen'));
             $matchStatus = [];
             if (count($splitRoute) === count($url)) {
                 foreach ($splitRoute as $key => $value) {

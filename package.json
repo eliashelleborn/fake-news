@@ -6,6 +6,6 @@
   "author": "Elias Johansson <elias_johansson@hotmail.se>",
   "license": "MIT",
   "dependencies": {
-    "bulma": "^0.7.2",
+    "bulma": "^0.7.2"
   }
 }
