@@ -1,3 +1,5 @@
+[![StyleCI](https://github.styleci.io/repos/153415742/shield?branch=master)](https://github.styleci.io/repos/153415742)
+
 # Fake News
 
 This project is a news website.
