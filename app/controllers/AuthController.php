@@ -1,5 +1,5 @@
 <?php
-declare (strict_types = 1);
+declare(strict_types = 1);
 
 namespace App\Controllers;
 
@@ -65,7 +65,6 @@ class AuthController extends Controller
                 } else {
                     $errors[] = 'Email is already in use.';
                 }
-
             }
         }
 

@@ -1,5 +1,5 @@
 <?php
-declare (strict_types = 1);
+declare(strict_types = 1);
 ?>
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">

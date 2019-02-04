@@ -1,5 +1,5 @@
 <?php
-declare (strict_types = 1);
+declare(strict_types = 1);
 
 namespace App\Controllers;
 
@@ -31,7 +31,7 @@ class AdminController extends Controller
         // Also if user is admin get all users
         if ($this->auth->user['role'] === "1") {
             $articles = $articleModel->getByAuthor($this->auth->user['id']);
-        } else if ($this->auth->user['role'] === "2") {
+        } elseif ($this->auth->user['role'] === "2") {
             $articles = $articleModel->getAll();
             $users = $userModel->getAll();
         }

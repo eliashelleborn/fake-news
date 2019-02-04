@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1);
+declare(strict_types = 1);
 
 namespace App\Controllers;
 
@@ -80,7 +80,6 @@ class ArticlesController extends Controller
                     $this->redirect("/admin");
                 } else {
                     $errors[] = 'Could not create article.';
-
                 }
             }
         }
@@ -98,10 +97,9 @@ class ArticlesController extends Controller
             // Check if user has role writer or higher
             if (!$this->auth->hasRole(1)) {
                 $this->redirect('/');
-
             }
             // If user is writer check if author matches logged in user
-            else if (!$this->auth->hasRole(2) && $article['authorId'] !== $this->auth->user['id']) {
+            elseif (!$this->auth->hasRole(2) && $article['authorId'] !== $this->auth->user['id']) {
                 $this->redirect('/');
             }
 
@@ -125,7 +123,6 @@ class ArticlesController extends Controller
         } else {
             $this->redirect('/');
         }
-
     }
 
     public function edit(string $id)
@@ -139,10 +136,9 @@ class ArticlesController extends Controller
             // Check if user has role writer or higher
             if (!$this->auth->hasRole(1)) {
                 $this->redirect('/');
-
             }
             // If user is writer check if author matches logged in user
-            else if (!$this->auth->hasRole(2) && $article['authorId'] !== $this->auth->user['id']) {
+            elseif (!$this->auth->hasRole(2) && $article['authorId'] !== $this->auth->user['id']) {
                 $this->redirect('/');
             }
 
@@ -175,7 +171,6 @@ class ArticlesController extends Controller
                             $this->redirect("/admin");
                         } else {
                             $errors[] = 'Could not create article.';
-
                         }
                     }
                 }
